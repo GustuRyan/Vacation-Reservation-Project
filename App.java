@@ -19,8 +19,7 @@ public class App {
         }
 
         public String toString() {
-            return ("Pada layanan ini bernuansa : " + nuance + "\nDengan kapasitas dari layanan : " + quantity
-                    + "\nPada tingkat harga : " + priceLevel);
+            return ("Pada layanan ini bernuansa : " + nuance + "\nDengan kapasitas dari layanan : " + quantity + "\nPada tingkat harga : " + priceLevel);
         }
     }
 
@@ -44,11 +43,43 @@ public class App {
         }
     }
 
+   class Hotelrooms extends Service {
+        public String type;
+        public String facilities;
+        public int roomNumber;
+        public int floorNumber;
+
+        public Hotelrooms(String nuance, int quantity, String priceLevel, String type, String facilities) {
+            super(nuance, quantity, priceLevel);
+            this.type = type;
+            this.facilities = facilities;
+        }
+
+        public void RoomDetails(int roomNumber, int floorNumber, int bedQuan) {
+            this.roomNumber = roomNumber;
+            this.floorNumber = floorNumber;
+            this.quantity = bedQuan;
+
+            System.out.println("\nHOTELROOMS DETAILS : " + "\n=====================" + "\nNomor kamar : " + roomNumber + "\nKamar berada pada lantai : " + floorNumber + "\nJumlah tempat tidur : " + quantity);
+        }
+
+        @Override
+        public String toString() {
+            return (super.toString() + "\nTipe dari kamar hotel ini : " + type + "\nDengan fasilitas yang ditawarkan : " + facilities);
+        }
+    }
+
     public static class Test {
         public static void main(String[] args) {
-
             Entertainment mb = new App().new Entertainment("Modern", 20, "midrange", "balinese", 8.00);
             System.out.println(mb.toString());
+
+            System.out.println("\n");
+
+            Hotelrooms mn = new App().new Hotelrooms("Contemporary", 10, "expensive", "Suite", "Private bathroom");
+            System.out.println(mn.toString());
+            mn.RoomDetails(101, 2, 5);
+            
         }
     }
 }
