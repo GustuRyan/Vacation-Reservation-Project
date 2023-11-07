@@ -1,10 +1,12 @@
 public class App {
     class Service {
+        public String svcName;
         public String nuance;
         public int quantity;
         public String priceLevel;
 
-        public Service(String nuance, int quantity, String priceLevel) {
+        public Service(String svcName, String nuance, int quantity, String priceLevel) {
+            this.svcName = svcName;
             this.nuance = nuance;
             this.quantity = quantity;
             this.priceLevel = priceLevel;
@@ -19,7 +21,7 @@ public class App {
         }
 
         public String toString() {
-            return ("Pada layanan ini bernuansa : " + nuance + "\nDengan kapasitas dari layanan : " + quantity + "\nPada tingkat harga : " + priceLevel);
+            return ("Nama layanan : " + svcName + "\nPada layanan ini bernuansa : " + nuance + "\nDengan kapasitas dari layanan : " + quantity + "\nPada tingkat harga : " + priceLevel);
         }
     }
 
@@ -27,8 +29,8 @@ public class App {
         public String theme;
         public double time;
 
-        public Entertainment(String nuance, int quantity, String priceLevel, String culture, double defaultTime) {
-            super(nuance, quantity, priceLevel);
+        public Entertainment(String svcName, String nuance, int quantity, String priceLevel, String culture, double defaultTime) {
+            super(svcName, nuance, quantity, priceLevel);
             theme = culture;
             time = defaultTime;
         }
@@ -43,14 +45,14 @@ public class App {
         }
     }
 
-   class Hotelrooms extends Service {
+    class Hotelrooms extends Service {
         public String type;
         public String facilities;
         public int roomNumber;
         public int floorNumber;
 
-        public Hotelrooms(String nuance, int quantity, String priceLevel, String type, String facilities) {
-            super(nuance, quantity, priceLevel);
+        public Hotelrooms(String svcName, String nuance, int quantity, String priceLevel, String type, String facilities) {
+            super(svcName, nuance, quantity, priceLevel);
             this.type = type;
             this.facilities = facilities;
         }
@@ -60,26 +62,67 @@ public class App {
             this.floorNumber = floorNumber;
             this.quantity = bedQuan;
 
-            System.out.println("\nHOTELROOMS DETAILS : " + "\n=====================" + "\nNomor kamar : " + roomNumber + "\nKamar berada pada lantai : " + floorNumber + "\nJumlah tempat tidur : " + quantity);
+            System.out.println("\nHOTELROOMS DETAILS : " + "\n=====================" + "\nNomor kamar : " + roomNumber
+                    + "\nKamar berada pada lantai : " + floorNumber + "\nJumlah tempat tidur : " + quantity);
         }
 
         @Override
         public String toString() {
-            return (super.toString() + "\nTipe dari kamar hotel ini : " + type + "\nDengan fasilitas yang ditawarkan : " + facilities);
+            return (super.toString() + "\nTipe dari kamar hotel ini : " + type + "\nDengan fasilitas yang ditawarkan : "
+                    + facilities);
+        }
+    }
+
+    class Customers {
+        private String cstmName;
+        private int ages;
+        private String status;
+
+        public String getName() {
+            return cstmName;
+        }
+
+        public void setName(String cstmName) {
+            this.cstmName = cstmName;
+        }
+
+        public int getAges() {
+            return ages;
+        }
+
+        public void setAges(int ages) {
+            this.ages = ages;
+        }
+
+        public String getStatus() {
+            return status;
+        }
+
+        public void setStatus(String status) {
+            this.status = status;
         }
     }
 
     public static class Test {
         public static void main(String[] args) {
-            Entertainment mb = new App().new Entertainment("Modern", 20, "midrange", "balinese", 8.00);
+            Customers person = new App().new Customers();
+            person.setName ("Putra");
+            person.setAges(21);
+            person.setStatus("Mahasiswa");
+
+            System.out.println("Name : " + person.getName() + "\nUmur : " + person.getAges() + "\nStatus : " + person.getStatus());
+
+            System.out.println("\nLAYANAN HIBURAN : ");
+
+            Entertainment mb = new App().new Entertainment("Tari Kecak", "Modern", 20, "midrange", "balinese", 8.00);
             System.out.println(mb.toString());
 
-            System.out.println("\n");
+            System.out.println("\nLAYANAN KAMAR HOTEL : ");
 
-            Hotelrooms mn = new App().new Hotelrooms("Contemporary", 10, "expensive", "Suite", "Private bathroom");
+            Hotelrooms mn = new App().new Hotelrooms("Suiteroom", "Contemporary", 10, "expensive", "Suite", "Private bathroom");
             System.out.println(mn.toString());
             mn.RoomDetails(101, 2, 5);
-            
+
         }
     }
 }
