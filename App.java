@@ -26,6 +26,7 @@ public class App {
     class Entertainment extends Service {
         public String theme;
         public double time;
+        public int i;
 
         public Entertainment(String nuance, int quantity, String priceLevel, String culture, double defaultTime) {
             super(nuance, quantity, priceLevel);
