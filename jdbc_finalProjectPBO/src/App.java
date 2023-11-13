@@ -83,8 +83,8 @@ public class App {
             return cstmName;
         }
 
-        public void setName(String cstmName) {
-            this.cstmName = cstmName;
+        public void setName(String Name) {
+            this.cstmName = Name;
         }
 
         public int getAges() {
