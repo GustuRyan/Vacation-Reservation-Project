@@ -77,11 +77,28 @@ public class Login {
     }
 
     class ForgotPass {
+        private  String username;
         private String email;
         private String phoneNum;
         private String newPass;
         private String inputUser;
+        private boolean confirm = false;
         Scanner scanner = new Scanner(System.in);
+
+        public void reAunthentication(String userName, String email, String phone){
+            this.username = userName;
+            this.email = email;
+            this.phoneNum = phone;
+
+            User user = new Login().new User("Wipra", "wipra123", "wipra@gmail.com", "08556545615");
+            if(username.equals(user.getNama()) & email.equals((user.getEmail())) & phone.equals(user.getPhone())){
+                confirm = true;
+            }
+        }
+
+        public boolean getConfirm(){
+            return confirm;
+        }
 
         public void inputUsername(String userName, String email, String phone) {
             this.email = email;

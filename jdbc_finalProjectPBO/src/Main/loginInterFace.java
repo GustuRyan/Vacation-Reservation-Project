@@ -4,13 +4,15 @@ import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class pboInterFace extends JFrame {
-    private JPanel panelMain;
+public class loginInterFace extends JFrame {
+    private JPanel loginPanel;
     private JTextField txtUsername;
     private JButton buttonClick;
     private JPasswordField passwordField;
+    private JButton forgotPass;
 
-    public pboInterFace() {
+    public loginInterFace() {
+
         // Inisialisasi komponen GUI di sini
         buttonClick.addActionListener(new ActionListener() {
             @Override
@@ -32,11 +34,17 @@ public class pboInterFace extends JFrame {
 
             }
         });
+        forgotPass.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+
+            }
+        });
     }
 
     public static void main(String[] args) {
-        pboInterFace frame = new pboInterFace();
-        frame.setContentPane(frame.panelMain);
+        loginInterFace frame = new loginInterFace();
+        frame.setContentPane(frame.loginPanel);
         frame.setBounds(600, 200, 0, 0);
         frame.pack();
         frame.setVisible(true);
