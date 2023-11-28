@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="signIn_signUp.loginInterFace">
+  <grid id="27dc6" binding="loginPanel" layout-manager="GridLayoutManager" row-count="12" column-count="4" same-size-horizontally="false" same-size-vertically="false" hgap="0" vgap="0">
+    <margin top="0" left="0" bottom="0" right="0"/>
+    <constraints>
+      <xy x="5" y="3" width="1428" height="832"/>
+    </constraints>
+    <properties>
+      <alignmentX value="0.2"/>
+      <alignmentY value="0.2"/>
+      <background color="-14727814"/>
+      <font name="Roboto" size="14" style="1"/>
+      <minimumSize width="-1" height="-1"/>
+      <requestFocusEnabled value="false"/>
+      <visible value="true"/>
+    </properties>
+    <border type="none"/>
+    <children>
+      <grid id="b0525" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+        <margin top="0" left="0" bottom="0" right="0"/>
+        <constraints>
+          <grid row="7" column="1" row-span="1" col-span="2" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <background color="-14727814"/>
+          <font name="Roboto" size="14" style="1"/>
+        </properties>
+        <border type="none"/>
+        <children>
+          <component id="7706b" class="javax.swing.JButton" binding="buttonClick">
+            <constraints>
+              <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false">
+                <preferred-size width="639" height="30"/>
+              </grid>
+            </constraints>
+            <properties>
+              <background color="-12583681"/>
+              <font name="Roboto" size="14" style="1"/>
+              <foreground color="-14727814"/>
+              <text value="&amp;Log In"/>
+            </properties>
+          </component>
+        </children>
+      </grid>
+      <grid id="ab1ee" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+        <margin top="0" left="0" bottom="0" right="0"/>
+        <constraints>
+          <grid row="11" column="1" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false">
+            <preferred-size width="18" height="18"/>
+          </grid>
+        </constraints>
+        <properties>
+          <background color="-14727814"/>
+          <font name="Roboto" size="14" style="1"/>
+          <foreground color="-12084251"/>
+        </properties>
+        <border type="none"/>
+        <children>
+          <component id="d8ae" class="javax.swing.JLabel">
+            <constraints>
+              <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <icon value="backgroundBott.png"/>
+              <requestFocusEnabled value="true"/>
+              <text value=""/>
+            </properties>
+          </component>
+        </children>
+      </grid>
+      <component id="c658b" class="javax.swing.JButton" binding="forgotPass">
+        <constraints>
+          <grid row="9" column="1" row-span="1" col-span="2" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <background color="-14727814"/>
+          <font name="Roboto" size="14" style="1"/>
+          <foreground color="-11075598"/>
+          <text value="Forgot Password"/>
+        </properties>
+      </component>
+      <component id="b067e" class="javax.swing.JButton" binding="registerButton">
+        <constraints>
+          <grid row="8" column="1" row-span="1" col-span="2" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <font name="Roboto" size="14" style="1"/>
+          <foreground color="-14727814"/>
+          <text value="Register"/>
+        </properties>
+      </component>
+      <component id="166b4" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="0" column="3" row-span="12" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <icon value="backgroundRight.jpg"/>
+          <text value=""/>
+        </properties>
+      </component>
+      <component id="7bbf6" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="0" column="0" row-span="12" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <icon value="backgroundRight.jpg"/>
+          <text value=""/>
+        </properties>
+      </component>
+      <component id="6bf78" class="javax.swing.JRadioButton" binding="showPass">
+        <constraints>
+          <grid row="6" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="4" fill="0" indent="0" use-parent-layout="false">
+            <preferred-size width="153" height="22"/>
+          </grid>
+        </constraints>
+        <properties>
+          <background color="-14727814"/>
+          <font name="Roboto" size="14" style="1"/>
+          <foreground color="-262153"/>
+          <text value="Show Password"/>
+        </properties>
+      </component>
+      <component id="afc0a" class="javax.swing.JPasswordField" binding="passwordField">
+        <constraints>
+          <grid row="4" column="2" row-span="2" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="153" height="30"/>
+          </grid>
+        </constraints>
+        <properties>
+          <font name="Roboto" size="14" style="1"/>
+        </properties>
+      </component>
+      <component id="fb0a" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="2" column="1" row-span="2" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false">
+            <preferred-size width="153" height="17"/>
+          </grid>
+        </constraints>
+        <properties>
+          <font name="Roboto" size="14" style="1"/>
+          <foreground color="-11075598"/>
+          <text value="Masukan Username"/>
+        </properties>
+      </component>
+      <component id="3514b" class="javax.swing.JTextField" binding="txtUsername">
+        <constraints>
+          <grid row="2" column="2" row-span="2" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="153" height="30"/>
+          </grid>
+        </constraints>
+        <properties>
+          <font name="Roboto" size="14" style="1"/>
+        </properties>
+      </component>
+      <component id="3239c" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="4" column="1" row-span="2" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <font name="Roboto" size="14" style="1"/>
+          <foreground color="-11075598"/>
+          <text value="Password"/>
+        </properties>
+      </component>
+      <component id="20ada" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <icon value="backgroundTop.png"/>
+          <text value=""/>
+        </properties>
+      </component>
+      <component id="aa53b" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <background color="-12327537"/>
+          <font name="Roboto" size="14" style="1"/>
+          <foreground color="-11075598"/>
+          <text value="USER LOGIN PAGE"/>
+        </properties>
+      </component>
+    </children>
+  </grid>
+</form>
