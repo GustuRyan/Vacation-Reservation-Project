@@ -1,0 +1,638 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="Reservasi.reservasiHotel">
+  <grid id="27dc6" binding="reservationPanel" layout-manager="GridLayoutManager" row-count="4" column-count="4" same-size-horizontally="false" same-size-vertically="false" hgap="0" vgap="0">
+    <margin top="0" left="0" bottom="0" right="0"/>
+    <constraints>
+      <xy x="20" y="20" width="1287" height="736"/>
+    </constraints>
+    <properties>
+      <background color="-262152"/>
+    </properties>
+    <border type="none"/>
+    <children>
+      <component id="632f8" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="0" column="0" row-span="3" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <icon value="publicNavBar/Slice 1.png"/>
+          <text value=""/>
+        </properties>
+      </component>
+      <component id="5d157" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <icon value="publicNavBar/Mask group-1.jpg"/>
+          <text value=""/>
+        </properties>
+      </component>
+      <component id="2ea" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="3" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <icon value="publicNavBar/Mask group.jpg"/>
+          <text value=""/>
+        </properties>
+      </component>
+      <component id="d0ee" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="2" column="1" row-span="1" col-span="3" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <icon value="publicNavBar/Slice 3.png"/>
+          <text value=""/>
+        </properties>
+      </component>
+      <grid id="20289" layout-manager="GridLayoutManager" row-count="1" column-count="11" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+        <margin top="0" left="0" bottom="0" right="0"/>
+        <constraints>
+          <grid row="1" column="1" row-span="1" col-span="3" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <background color="-14727814"/>
+        </properties>
+        <border type="none"/>
+        <children>
+          <component id="77678" class="javax.swing.JButton" binding="HOMEButton" default-binding="true">
+            <constraints>
+              <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <background color="-14727814"/>
+              <borderPainted value="false"/>
+              <contentAreaFilled value="true"/>
+              <focusCycleRoot value="true"/>
+              <focusPainted value="false"/>
+              <focusTraversalPolicyProvider value="false"/>
+              <font name="Roboto" size="20" style="1"/>
+              <foreground color="-262152"/>
+              <text value="HOME"/>
+            </properties>
+          </component>
+          <component id="c697f" class="javax.swing.JButton" binding="REGISTERButton" default-binding="true">
+            <constraints>
+              <grid row="0" column="9" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <background color="-262152"/>
+              <borderPainted value="false"/>
+              <contentAreaFilled value="true"/>
+              <focusCycleRoot value="true"/>
+              <focusPainted value="false"/>
+              <font name="Roboto" size="20" style="1"/>
+              <foreground color="-14727814"/>
+              <text value="REGISTER"/>
+            </properties>
+          </component>
+          <component id="4bee1" class="javax.swing.JButton" binding="LOGINButton" default-binding="true">
+            <constraints>
+              <grid row="0" column="7" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <background color="-14727814"/>
+              <borderPainted value="false"/>
+              <focusCycleRoot value="true"/>
+              <focusPainted value="false"/>
+              <font name="Roboto" size="20" style="1"/>
+              <foreground color="-262152"/>
+              <text value="LOGIN"/>
+            </properties>
+          </component>
+          <component id="3b95a" class="javax.swing.JButton" binding="EXPLOREButton" default-binding="true">
+            <constraints>
+              <grid row="0" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <background color="-14727814"/>
+              <borderPainted value="false"/>
+              <focusCycleRoot value="true"/>
+              <focusPainted value="false"/>
+              <font name="Roboto" size="20" style="1"/>
+              <foreground color="-262152"/>
+              <text value="EXPLORE"/>
+            </properties>
+          </component>
+          <component id="8ff8b" class="javax.swing.JButton" binding="RESERVATIONButton" default-binding="true">
+            <constraints>
+              <grid row="0" column="5" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <background color="-14727814"/>
+              <borderPainted value="false"/>
+              <focusCycleRoot value="true"/>
+              <focusPainted value="false"/>
+              <font name="Roboto" size="20" style="1"/>
+              <foreground color="-11075598"/>
+              <text value="RESERVATION"/>
+            </properties>
+          </component>
+          <vspacer id="c8a11">
+            <constraints>
+              <grid row="0" column="10" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false">
+                <preferred-size width="30" height="-1"/>
+              </grid>
+            </constraints>
+          </vspacer>
+          <vspacer id="e8275">
+            <constraints>
+              <grid row="0" column="2" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false">
+                <preferred-size width="40" height="-1"/>
+              </grid>
+            </constraints>
+          </vspacer>
+          <vspacer id="c1374">
+            <constraints>
+              <grid row="0" column="4" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false">
+                <preferred-size width="40" height="-1"/>
+              </grid>
+            </constraints>
+          </vspacer>
+          <vspacer id="e7a42">
+            <constraints>
+              <grid row="0" column="8" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false">
+                <preferred-size width="10" height="-1"/>
+              </grid>
+            </constraints>
+          </vspacer>
+          <vspacer id="283c6">
+            <constraints>
+              <grid row="0" column="6" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false">
+                <preferred-size width="150" height="-1"/>
+              </grid>
+            </constraints>
+          </vspacer>
+          <vspacer id="21c98">
+            <constraints>
+              <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false">
+                <preferred-size width="150" height="-1"/>
+              </grid>
+            </constraints>
+          </vspacer>
+        </children>
+      </grid>
+      <component id="82eaf" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="0" column="1" row-span="1" col-span="3" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <icon value="publicNavBar/Slice 2.png"/>
+          <text value=""/>
+        </properties>
+      </component>
+      <grid id="d36d3" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+        <margin top="0" left="0" bottom="0" right="0"/>
+        <constraints>
+          <grid row="3" column="1" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <background color="-262153"/>
+        </properties>
+        <border type="none"/>
+        <children>
+          <grid id="83da7" layout-manager="GridLayoutManager" row-count="19" column-count="10" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+            <margin top="0" left="0" bottom="0" right="0"/>
+            <constraints>
+              <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <background color="-262153"/>
+            </properties>
+            <border type="none"/>
+            <children>
+              <component id="17e9" class="javax.swing.JTextField" binding="textField7" default-binding="true">
+                <constraints>
+                  <grid row="3" column="2" row-span="1" col-span="7" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+                    <preferred-size width="150" height="-1"/>
+                  </grid>
+                </constraints>
+                <properties>
+                  <background color="-14727814"/>
+                  <font name="Roboto" size="16" style="0"/>
+                  <foreground color="-262153"/>
+                </properties>
+              </component>
+              <component id="1d217" class="javax.swing.JLabel">
+                <constraints>
+                  <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <font name="Roboto" size="16" style="0"/>
+                  <foreground color="-14727814"/>
+                  <text value="Nama Lengkap"/>
+                </properties>
+              </component>
+              <component id="54e55" class="javax.swing.JButton" binding="button1" default-binding="true">
+                <constraints>
+                  <grid row="3" column="9" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <background color="-262153"/>
+                  <borderPainted value="false"/>
+                  <foreground color="-14727814"/>
+                  <label value="Clear"/>
+                  <text value="Clear"/>
+                </properties>
+              </component>
+              <component id="32b2b" class="javax.swing.JButton" binding="button4" default-binding="true">
+                <constraints>
+                  <grid row="11" column="9" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <background color="-262153"/>
+                  <borderPainted value="false"/>
+                  <foreground color="-14727814"/>
+                  <label value="Clear"/>
+                  <text value="Clear"/>
+                </properties>
+              </component>
+              <component id="b0a8d" class="javax.swing.JButton" binding="button5" default-binding="true">
+                <constraints>
+                  <grid row="13" column="9" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <background color="-262153"/>
+                  <borderPainted value="false"/>
+                  <foreground color="-14727814"/>
+                  <label value="Clear"/>
+                  <text value="Clear"/>
+                </properties>
+              </component>
+              <component id="fd85e" class="javax.swing.JButton" binding="button6" default-binding="true">
+                <constraints>
+                  <grid row="15" column="9" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <background color="-262153"/>
+                  <borderPainted value="false"/>
+                  <foreground color="-14727814"/>
+                  <label value="Clear"/>
+                  <text value="Clear"/>
+                </properties>
+              </component>
+              <component id="603d6" class="javax.swing.JLabel">
+                <constraints>
+                  <grid row="11" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <font name="Roboto" size="16" style="0"/>
+                  <foreground color="-14727814"/>
+                  <text value="Tanggal"/>
+                </properties>
+              </component>
+              <component id="152a8" class="javax.swing.JLabel">
+                <constraints>
+                  <grid row="13" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <font name="Roboto" size="16" style="0"/>
+                  <foreground color="-14727814"/>
+                  <text value="Bulan"/>
+                </properties>
+              </component>
+              <component id="2f01e" class="javax.swing.JLabel">
+                <constraints>
+                  <grid row="15" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <font name="Roboto" size="16" style="0"/>
+                  <foreground color="-14727814"/>
+                  <text value="Tahun"/>
+                </properties>
+              </component>
+              <component id="96ce2" class="javax.swing.JTextField" binding="textField6" default-binding="true">
+                <constraints>
+                  <grid row="7" column="2" row-span="1" col-span="7" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+                    <preferred-size width="150" height="-1"/>
+                  </grid>
+                </constraints>
+                <properties>
+                  <background color="-14727814"/>
+                  <font name="Roboto" size="16" style="0"/>
+                  <foreground color="-262153"/>
+                </properties>
+              </component>
+              <component id="64646" class="javax.swing.JTextField" binding="textField1" default-binding="true">
+                <constraints>
+                  <grid row="11" column="2" row-span="1" col-span="7" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+                    <preferred-size width="150" height="-1"/>
+                  </grid>
+                </constraints>
+                <properties>
+                  <background color="-14727814"/>
+                  <font name="Roboto" size="16" style="0"/>
+                  <foreground color="-262153"/>
+                </properties>
+              </component>
+              <component id="555a1" class="javax.swing.JTextField" binding="textField2" default-binding="true">
+                <constraints>
+                  <grid row="13" column="2" row-span="1" col-span="7" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+                    <preferred-size width="150" height="-1"/>
+                  </grid>
+                </constraints>
+                <properties>
+                  <background color="-14727814"/>
+                  <font name="Roboto" size="16" style="0"/>
+                  <foreground color="-262153"/>
+                </properties>
+              </component>
+              <component id="64f8" class="javax.swing.JTextField" binding="textField3" default-binding="true">
+                <constraints>
+                  <grid row="15" column="2" row-span="1" col-span="7" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+                    <preferred-size width="150" height="-1"/>
+                  </grid>
+                </constraints>
+                <properties>
+                  <background color="-14727814"/>
+                  <font name="Roboto" size="16" style="0"/>
+                  <foreground color="-262153"/>
+                </properties>
+              </component>
+              <component id="e8a07" class="javax.swing.JLabel">
+                <constraints>
+                  <grid row="7" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <font name="Roboto" size="16" style="0"/>
+                  <foreground color="-14727814"/>
+                  <text value="Nomor Telepon"/>
+                </properties>
+              </component>
+              <component id="805a0" class="javax.swing.JLabel">
+                <constraints>
+                  <grid row="8" column="0" row-span="3" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <font name="Roboto" size="16" style="0"/>
+                  <foreground color="-14727814"/>
+                  <text value="Pilih Kamar Hotel"/>
+                </properties>
+              </component>
+              <component id="2ceb3" class="javax.swing.JTextField" binding="ddsaTextField" default-binding="true">
+                <constraints>
+                  <grid row="5" column="2" row-span="1" col-span="7" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+                    <preferred-size width="150" height="-1"/>
+                  </grid>
+                </constraints>
+                <properties>
+                  <background color="-14727814"/>
+                  <font name="Roboto" size="16" style="0"/>
+                  <foreground color="-262153"/>
+                  <text value=""/>
+                </properties>
+              </component>
+              <component id="700ab" class="javax.swing.JLabel">
+                <constraints>
+                  <grid row="5" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <font name="Roboto" size="16" style="0"/>
+                  <foreground color="-14727814"/>
+                  <text value="Email"/>
+                </properties>
+              </component>
+              <component id="f565b" class="javax.swing.JButton" binding="button3" default-binding="true">
+                <constraints>
+                  <grid row="5" column="9" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <background color="-262153"/>
+                  <borderPainted value="false"/>
+                  <foreground color="-14727814"/>
+                  <label value="Clear"/>
+                  <text value="Clear"/>
+                </properties>
+              </component>
+              <component id="f78c3" class="javax.swing.JButton" default-binding="true">
+                <constraints>
+                  <grid row="7" column="9" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <background color="-262153"/>
+                  <borderPainted value="false"/>
+                  <foreground color="-14727814"/>
+                  <label value="Clear"/>
+                  <text value="Clear"/>
+                </properties>
+              </component>
+              <component id="fb9" class="javax.swing.JLabel">
+                <constraints>
+                  <grid row="8" column="5" row-span="3" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <font name="Roboto" size="16" style="0"/>
+                  <foreground color="-14727814"/>
+                  <text value="Jumlah Kamar"/>
+                </properties>
+              </component>
+              <component id="7605c" class="javax.swing.JButton" binding="clickMeButton" default-binding="true">
+                <constraints>
+                  <grid row="17" column="8" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <background color="-262153"/>
+                  <font name="Roboto" size="16" style="1"/>
+                  <foreground color="-14727814"/>
+                  <label value="Cetak Pesanan"/>
+                  <text value="Cetak Pesanan"/>
+                </properties>
+              </component>
+              <vspacer id="ee818">
+                <constraints>
+                  <grid row="8" column="4" row-span="3" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false">
+                    <preferred-size width="30" height="-1"/>
+                  </grid>
+                </constraints>
+              </vspacer>
+              <vspacer id="69a17">
+                <constraints>
+                  <grid row="18" column="4" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+                </constraints>
+              </vspacer>
+              <vspacer id="be844">
+                <constraints>
+                  <grid row="0" column="4" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+                </constraints>
+              </vspacer>
+              <component id="4e2bf" class="javax.swing.JLabel">
+                <constraints>
+                  <grid row="1" column="2" row-span="1" col-span="7" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <alignmentX value="0.0"/>
+                  <font name="Roboto" size="24" style="1"/>
+                  <foreground color="-14727814"/>
+                  <text value="PEMESANAN KAMAR HOTEL"/>
+                </properties>
+              </component>
+              <vspacer id="e77c5">
+                <constraints>
+                  <grid row="8" column="7" row-span="3" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false">
+                    <preferred-size width="15" height="-1"/>
+                  </grid>
+                </constraints>
+              </vspacer>
+              <vspacer id="b864b">
+                <constraints>
+                  <grid row="0" column="1" row-span="19" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false">
+                    <preferred-size width="15" height="-1"/>
+                  </grid>
+                </constraints>
+              </vspacer>
+              <component id="d730f" class="javax.swing.JTextPane" binding="DELUXEHarga2000kTersediaTextPane" default-binding="true">
+                <constraints>
+                  <grid row="10" column="2" row-span="1" col-span="1" vsize-policy="6" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false">
+                    <preferred-size width="150" height="-1"/>
+                  </grid>
+                </constraints>
+                <properties>
+                  <background color="-14727814"/>
+                  <font name="Roboto" size="16" style="0"/>
+                  <foreground color="-262153"/>
+                  <text value="DELUXE (Harga = 2000k) (Tersedia = 5)"/>
+                </properties>
+              </component>
+              <component id="221df" class="javax.swing.JTextPane" default-binding="true">
+                <constraints>
+                  <grid row="8" column="2" row-span="1" col-span="1" vsize-policy="6" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false">
+                    <preferred-size width="150" height="-1"/>
+                  </grid>
+                </constraints>
+                <properties>
+                  <background color="-14727814"/>
+                  <font name="Roboto" size="16" style="0"/>
+                  <foreground color="-262153"/>
+                  <text value="SINGLE (Harga = 750k) (Tersedia = 30)"/>
+                </properties>
+              </component>
+              <component id="f9fc" class="javax.swing.JTextPane" default-binding="true">
+                <constraints>
+                  <grid row="9" column="2" row-span="1" col-span="1" vsize-policy="6" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false">
+                    <preferred-size width="150" height="-1"/>
+                  </grid>
+                </constraints>
+                <properties>
+                  <background color="-14727814"/>
+                  <font name="Roboto" size="16" style="0"/>
+                  <foreground color="-262153"/>
+                  <text value="DOUBLE (Harga = 1250k) (Tersedia = 15)"/>
+                </properties>
+              </component>
+              <component id="e288e" class="javax.swing.JSpinner" binding="jumlahKamar1">
+                <constraints>
+                  <grid row="8" column="8" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <background color="-14727814"/>
+                  <font name="Roboto" size="16" style="0"/>
+                  <foreground color="-262153"/>
+                </properties>
+              </component>
+              <component id="1c1d4" class="javax.swing.JSpinner" binding="jumlahKamar2">
+                <constraints>
+                  <grid row="9" column="8" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <background color="-14727814"/>
+                  <font name="Roboto" size="16" style="0"/>
+                  <foreground color="-262153"/>
+                </properties>
+              </component>
+              <component id="a849e" class="javax.swing.JSpinner" binding="jumlahKamar3">
+                <constraints>
+                  <grid row="10" column="8" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <background color="-14727814"/>
+                  <font name="Roboto" size="16" style="0"/>
+                  <foreground color="-262153"/>
+                </properties>
+              </component>
+              <hspacer id="1054d">
+                <constraints>
+                  <grid row="2" column="2" row-span="1" col-span="8" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false">
+                    <preferred-size width="-1" height="25"/>
+                  </grid>
+                </constraints>
+              </hspacer>
+              <hspacer id="9c466">
+                <constraints>
+                  <grid row="4" column="2" row-span="1" col-span="8" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false">
+                    <preferred-size width="-1" height="25"/>
+                  </grid>
+                </constraints>
+              </hspacer>
+              <hspacer id="6025a">
+                <constraints>
+                  <grid row="6" column="2" row-span="1" col-span="8" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false">
+                    <preferred-size width="-1" height="25"/>
+                  </grid>
+                </constraints>
+              </hspacer>
+              <hspacer id="bd2e3">
+                <constraints>
+                  <grid row="12" column="2" row-span="1" col-span="7" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false">
+                    <preferred-size width="-1" height="25"/>
+                  </grid>
+                </constraints>
+              </hspacer>
+              <hspacer id="fc7a4">
+                <constraints>
+                  <grid row="14" column="2" row-span="1" col-span="7" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false">
+                    <preferred-size width="-1" height="25"/>
+                  </grid>
+                </constraints>
+              </hspacer>
+              <hspacer id="f59ff">
+                <constraints>
+                  <grid row="16" column="8" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false">
+                    <preferred-size width="-1" height="35"/>
+                  </grid>
+                </constraints>
+              </hspacer>
+              <component id="11cb1" class="javax.swing.JCheckBox" binding="checkBox1" default-binding="true">
+                <constraints>
+                  <grid row="8" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <background color="-14727814"/>
+                  <foreground color="-262153"/>
+                  <text value=""/>
+                </properties>
+              </component>
+              <component id="1d31b" class="javax.swing.JCheckBox" default-binding="true">
+                <constraints>
+                  <grid row="9" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <background color="-14727814"/>
+                  <foreground color="-262153"/>
+                  <text value=""/>
+                </properties>
+              </component>
+              <component id="40d35" class="javax.swing.JCheckBox" default-binding="true">
+                <constraints>
+                  <grid row="10" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <background color="-14727814"/>
+                  <foreground color="-262153"/>
+                  <text value=""/>
+                </properties>
+              </component>
+            </children>
+          </grid>
+        </children>
+      </grid>
+      <vspacer id="c4090">
+        <constraints>
+          <grid row="3" column="2" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false">
+            <preferred-size width="113" height="-1"/>
+          </grid>
+        </constraints>
+      </vspacer>
+    </children>
+  </grid>
+</form>
