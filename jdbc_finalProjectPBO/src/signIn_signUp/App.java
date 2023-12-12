@@ -1,5 +1,7 @@
 package signIn_signUp;
 
+import java.util.ArrayList;
+
 public class App {
     class Service {
         public String svcName;
@@ -104,6 +106,20 @@ public class App {
         public void setStatus(String status) {
             this.status = status;
         }
+    }
+
+    public static String[] printData() {
+        ArrayList<String> resultList = new ArrayList<>();
+
+        for (int i = 0; i < 50; i++) {
+            String result = "[<><><>()<>()<><><><<{{}}>><><><>()<>()<><><>]]\n"
+                    + "TEST" + "\n[[<><><>()<>()<><><><<{{}}>><><><>()<>()<><><>]]\n\n";
+            resultList.add(result);
+        }
+        // Mengonversi ArrayList menjadi array
+        String[] arrayResult = resultList.toArray(new String[0]);
+
+        return arrayResult;
     }
 
     public static class Test {

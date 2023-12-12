@@ -57,7 +57,7 @@
               <grid row="0" column="0" row-span="14" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties>
-              <icon value="backgroundLeftReg.png"/>
+              <icon value="publicSign/backgroundLeftReg.png"/>
               <text value=""/>
             </properties>
           </component>
@@ -66,7 +66,7 @@
               <grid row="0" column="6" row-span="14" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties>
-              <icon value="backgroundRightReg.png"/>
+              <icon value="publicSign/backgroundRightReg.png"/>
               <text value=""/>
             </properties>
           </component>
@@ -75,7 +75,7 @@
               <grid row="0" column="1" row-span="1" col-span="5" vsize-policy="0" hsize-policy="0" anchor="9" fill="0" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties>
-              <icon value="backgroundTopReg.png"/>
+              <icon value="publicSign/backgroundTopReg.png"/>
               <text value=""/>
             </properties>
           </component>
@@ -84,7 +84,7 @@
               <grid row="13" column="1" row-span="1" col-span="5" vsize-policy="0" hsize-policy="0" anchor="10" fill="0" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties>
-              <icon value="backgroundTopBotFPW.png"/>
+              <icon value="publicSign/backgroundTopBotFPW.png"/>
               <text value=""/>
             </properties>
           </component>

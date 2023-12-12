@@ -17,13 +17,13 @@ public class reservasiHotel extends JFrame {
     private JButton EXPLOREButton;
     private JButton RESERVATIONButton;
     private JPanel reservationPanel;
-    private JTextField textField1;
+    private JTextField tanggalTextField;
     private JButton clickMeButton;
-    private JTextField textField2;
-    private JTextField textField3;
-    private JTextField ddsaTextField;
-    private JTextField textField6;
-    private JTextField textField7;
+    private JTextField bulanTextField;
+    private JTextField tahunTextField;
+    private JTextField emailTextField;
+    private JTextField teleponTextField;
+    private JTextField namaTextField;
     private JButton button1;
     private JButton button4;
     private JButton button5;
@@ -34,6 +34,9 @@ public class reservasiHotel extends JFrame {
     private JSpinner jumlahKamar1;
     private JSpinner jumlahKamar3;
     private JCheckBox checkBox1;
+    private JCheckBox checkBox2;
+    private JCheckBox checkBox3;
+    private JTextField lamaBook;
 
     public reservasiHotel() {
         LOGINButton.addActionListener(new ActionListener() {
@@ -56,8 +59,26 @@ public class reservasiHotel extends JFrame {
         clickMeButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                String namaLengkap = textField1.getText();
-                JOptionPane.showMessageDialog(clickMeButton, "Nama Lengkap : " + namaLengkap);
+                String tipeKamar = null;
+                double hargaKamar = 0;
+                int jumlahKamar = 1;
+                if (checkBox1.isSelected()){
+                    tipeKamar = "SINGLE";
+                    hargaKamar = 750000.00;
+                    jumlahKamar = (int) jumlahKamar1.getValue();
+                } else if (checkBox2.isSelected()) {
+                    tipeKamar = "DOUBLE";
+                    hargaKamar = 1250000.00;
+                    jumlahKamar = (int) jumlahKamar2.getValue();
+                } else if (checkBox3.isSelected()) {
+                    tipeKamar = "DELUXE";
+                    hargaKamar = 2000000.00;
+                    jumlahKamar = (int) jumlahKamar3.getValue();
+                }
+
+                fileWriter.writeToFile(namaTextField.getText(), emailTextField.getText(), teleponTextField.getText(), tipeKamar, hargaKamar,
+                        tanggalTextField.getText(), bulanTextField.getText(), tahunTextField.getText(), jumlahKamar, lamaBook.getText());
+                JOptionPane.showMessageDialog(clickMeButton, "Nota Pemesanan sudah berhasil dibuat");
             }
         });
 
@@ -88,6 +109,14 @@ public class reservasiHotel extends JFrame {
                 super.componentResized(e);
                 SpinnerNumberModel newModel = new SpinnerNumberModel(0, 0, 5, 1);
                 jumlahKamar3.setModel(newModel);
+            }
+        });
+        REGISTERButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                registerIF frame = new registerIF();
+                frame.interfaceRegist();
+                setVisible(false);
             }
         });
     }

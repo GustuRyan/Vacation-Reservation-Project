@@ -21,16 +21,15 @@ public class loginInterFace extends JFrame {
         buttonClick.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                Login.User user = new Login().new User("Wipra", "wipra123", "wipra@gmail.com", "08123456789");
-                Login.UserDatabase userDatabase = new Login().new UserDatabase();
-                userDatabase.addUser(new Login().new User("Wipra", "wipra123", "wipra@gmail.com", "08123456789"));
-                Login.Authentication authentication = new Login().new Authentication(userDatabase);
+                importSQL.importData();
+                importSQL.Checking check = new importSQL().new Checking();
+                check.desired(txtUsername.getText());
+                Login.Authentication authentication = new Login().new Authentication();
 
                 char[] passwordChars = passwordField.getPassword();
                 // Mengubah karakter menjadi String
                 String password = new String(passwordChars);
-
-                if (authentication.authenticate(txtUsername.getText(), password)) {
+                if (authentication.authenticate(check.getUsername(), txtUsername.getText(), check.getPassword(), password)) {
                     JOptionPane.showMessageDialog(buttonClick, "Log In SUKSES!");
                     reservasiHotel frame = new reservasiHotel();
                     frame.interfaceReservation();
@@ -38,7 +37,6 @@ public class loginInterFace extends JFrame {
                 } else {
                     JOptionPane.showMessageDialog(buttonClick, "Log In TIDAK BERHASIL!");
                 }
-
             }
         });
         forgotPass.addActionListener(new ActionListener() {

@@ -26,7 +26,21 @@ public class registerIF extends JFrame {
         confirmButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                importSQL.Checking check = new importSQL().new Checking();
+                importSQL.importData();
 
+                char[] passwordChars = passwordField1.getPassword();
+                String password = new String(passwordChars);
+                char[] password2Chars = passwordField2.getPassword();
+                String password2 = new String(passwordChars);
+
+                if (password.equals(password2)){
+                    importSQL.Insert insert = new importSQL(). new Insert();
+                    insert.regist(regisUsername.getText(), password, regisEmail.getText(), regisPhone.getText());
+                    JOptionPane.showMessageDialog(confirmButton, "Akun Baru Terkonfirmasi!");
+                } else {
+                    JOptionPane.showMessageDialog(confirmButton, "Gagal Membuat Akun, Kedua Password Berbeda \n(Masukkan ulang password baru!)");
+                }
             }
         });
         showPass1.addActionListener(new ActionListener() {

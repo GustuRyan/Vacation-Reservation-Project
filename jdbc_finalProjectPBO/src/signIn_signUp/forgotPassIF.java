@@ -33,9 +33,11 @@ public class forgotPassIF extends JFrame {
         nextPanelButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                Login.User user = new Login().new User("Wipra", "wipra123", "wipra@gmail.com", "08123456789");
+                importSQL.importData();
+                importSQL.Checking check = new importSQL().new Checking();
+                check.desired(inputUsername.getText());
                 Login.ForgotPass forgot = new Login().new ForgotPass();
-                forgot.reAunthentication(inputUsername.getText(), inputEmail.getText(), inputPhone.getText());
+                forgot.reAunthentication(inputUsername.getText(), check.getUsername(), inputEmail.getText(), check.getEmail(), inputPhone.getText(), check.getPhone());
 
                 if (forgot.getConfirm()){
                     if(firstTime) {
@@ -56,12 +58,17 @@ public class forgotPassIF extends JFrame {
         confirmNewPasswordButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                importSQL.Checking check = new importSQL().new Checking();
+                check.desired(inputUsername.getText());
+
                 char[] passwordChars = passwordField1.getPassword();
                 String password = new String(passwordChars);
                 char[] password2Chars = passwordField2.getPassword();
                 String password2 = new String(passwordChars);
 
                 if (password.equals(password2)){
+                    importSQL.Update update = new importSQL(). new Update();
+                    update.updatePass(check.getUsername(), password);
                     JOptionPane.showMessageDialog(confirmNewPasswordButton, "Password Baru Terkonfirmasi!");
                 } else {
                     JOptionPane.showMessageDialog(confirmNewPasswordButton, "Gagal Membuat Password, Kedua Password Berbeda \n(Masukkan ulang password baru!)");
