@@ -1,6 +1,7 @@
 package signIn_signUp;
 
-import Reservasi.reservasiHotel;
+import Home.homeLoggedIn;
+import Home.interfaceHome;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
@@ -14,6 +15,7 @@ public class loginInterFace extends JFrame {
     private JButton buttonClick;
     private JButton registerButton;
     private JButton forgotPass;
+    private JButton kembaliButton;
 
     public loginInterFace() {
 
@@ -31,8 +33,8 @@ public class loginInterFace extends JFrame {
                 String password = new String(passwordChars);
                 if (authentication.authenticate(check.getUsername(), txtUsername.getText(), check.getPassword(), password)) {
                     JOptionPane.showMessageDialog(buttonClick, "Log In SUKSES!");
-                    reservasiHotel frame = new reservasiHotel();
-                    frame.interfaceReservation();
+                    homeLoggedIn frame = new homeLoggedIn(txtUsername.getText());
+                    frame.homeLIF(txtUsername.getText());
                     setVisible(false);
                 } else {
                     JOptionPane.showMessageDialog(buttonClick, "Log In TIDAK BERHASIL!");
@@ -63,6 +65,14 @@ public class loginInterFace extends JFrame {
             public void actionPerformed(ActionEvent e) {
                 registerIF frame = new registerIF();
                 frame.interfaceRegist();
+                setVisible(false);
+            }
+        });
+        kembaliButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                interfaceHome frame = new interfaceHome();
+                frame.homeIF();
                 setVisible(false);
             }
         });

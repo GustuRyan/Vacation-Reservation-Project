@@ -1,21 +1,67 @@
 package Home;
 
-import signIn_signUp.App;
+import signIn_signUp.loginInterFace;
+import signIn_signUp.registerIF;
 
 import javax.swing.*;
-import java.util.Arrays;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 public class interfaceHome  extends  JFrame  {
-    private JTextArea textArea1;
     private JPanel homePanel;
     private JButton HOMEButton;
     private JButton EXPLOREButton;
     private JButton RESERVATIONButton;
     private JButton LOGINButton;
     private JButton REGISTERButton;
+    private JPanel leftCardPanel;
+    private JButton selengkapnyaButton;
+    private JButton selengkapnyaButton1;
 
     public interfaceHome(){
-         textArea1.setText(Arrays.toString(App.printData()));
+
+        LOGINButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                loginInterFace frame = new loginInterFace();
+                frame.interfaceLogin();
+                setVisible(false);
+            }
+        });
+        RESERVATIONButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                JOptionPane.showMessageDialog(RESERVATIONButton, "Log In Terlebih Dahulu!");
+                loginInterFace frame = new loginInterFace();
+                frame.interfaceLogin();
+                setVisible(false);
+            }
+        });
+        EXPLOREButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                JOptionPane.showMessageDialog(RESERVATIONButton, "Log In Terlebih Dahulu!");
+                loginInterFace frame = new loginInterFace();
+                frame.interfaceLogin();
+                setVisible(false);
+            }
+        });
+        REGISTERButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                registerIF frame = new registerIF();
+                frame.interfaceRegist();
+                setVisible(false);
+            }
+        });
+        ActionListener listener = new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                JOptionPane.showMessageDialog(RESERVATIONButton, "Log In Terlebih Dahulu!");
+            }
+        };
+        selengkapnyaButton.addActionListener(listener);
+        selengkapnyaButton1.addActionListener(listener);
     }
 
     public static void homeIF(){

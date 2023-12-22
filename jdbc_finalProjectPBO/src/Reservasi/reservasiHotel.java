@@ -1,6 +1,7 @@
 package Reservasi;
 
-import signIn_signUp.loginInterFace;
+import Explore.exploreIF;
+import Home.homeLoggedIn;
 import signIn_signUp.registerIF;
 
 import javax.swing.*;
@@ -13,7 +14,6 @@ import java.awt.event.ComponentEvent;
 public class reservasiHotel extends JFrame {
     private JButton HOMEButton;
     private JButton REGISTERButton;
-    private JButton LOGINButton;
     private JButton EXPLOREButton;
     private JButton RESERVATIONButton;
     private JPanel reservationPanel;
@@ -37,25 +37,11 @@ public class reservasiHotel extends JFrame {
     private JCheckBox checkBox2;
     private JCheckBox checkBox3;
     private JTextField lamaBook;
+    private JButton usernameButton;
 
-    public reservasiHotel() {
-        LOGINButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                loginInterFace frame = new loginInterFace();
-                frame.interfaceLogin();
-                setVisible(false);
-            }
-        });
-        REGISTERButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                registerIF frame = new registerIF();
-                frame.interfaceRegist();
-                setVisible(false);
-            }
-        });
-
+    public reservasiHotel(String user) {
+        String username = user;
+        usernameButton.setText(username);
         clickMeButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -119,19 +105,31 @@ public class reservasiHotel extends JFrame {
                 setVisible(false);
             }
         });
+        HOMEButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                homeLoggedIn frame = new homeLoggedIn(username);
+                frame.homeLIF(username);
+                setVisible(false);
+            }
+        });
+        EXPLOREButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                exploreIF frame = new exploreIF(username);
+                frame.interfaceExplore(username);
+                setVisible(false);
+            }
+        });
     }
 
-    public static void interfaceReservation(){
-        reservasiHotel frame = new reservasiHotel();
+    public static void interfaceReservation(String username){
+        reservasiHotel frame = new reservasiHotel(username);
         frame.setContentPane(frame.reservationPanel);
         frame.setBounds(120, 40, 0, 0);
         frame.pack();
         frame.setVisible(true);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-    }
-
-    public static void main(String[] args) {
-        interfaceReservation();
     }
 
     private void createUIComponents () {

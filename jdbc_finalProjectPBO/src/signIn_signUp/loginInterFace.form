@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="signIn_signUp.loginInterFace">
-  <grid id="27dc6" binding="loginPanel" layout-manager="GridLayoutManager" row-count="18" column-count="7" same-size-horizontally="false" same-size-vertically="false" hgap="0" vgap="0">
+  <grid id="27dc6" binding="loginPanel" layout-manager="GridLayoutManager" row-count="20" column-count="7" same-size-horizontally="false" same-size-vertically="false" hgap="0" vgap="0">
     <margin top="0" left="0" bottom="0" right="0"/>
     <constraints>
       <xy x="5" y="3" width="1287" height="735"/>
@@ -18,7 +18,7 @@
     <children>
       <component id="a8936" class="javax.swing.JLabel">
         <constraints>
-          <grid row="0" column="0" row-span="18" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+          <grid row="0" column="0" row-span="20" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
           <icon value="publicSign/backgroundLeft.png"/>
@@ -27,7 +27,7 @@
       </component>
       <component id="f7ad8" class="javax.swing.JLabel">
         <constraints>
-          <grid row="0" column="6" row-span="18" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+          <grid row="0" column="6" row-span="20" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
           <icon value="publicSign/backgroundRight.png"/>
@@ -45,7 +45,7 @@
       </component>
       <component id="703bb" class="javax.swing.JLabel">
         <constraints>
-          <grid row="15" column="1" row-span="3" col-span="5" vsize-policy="0" hsize-policy="0" anchor="10" fill="0" indent="0" use-parent-layout="false"/>
+          <grid row="17" column="1" row-span="3" col-span="5" vsize-policy="0" hsize-policy="0" anchor="10" fill="0" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
           <icon value="publicSign/backgroundBott.png"/>
@@ -170,7 +170,7 @@
       </grid>
       <vspacer id="ff64f">
         <constraints>
-          <grid row="14" column="1" row-span="1" col-span="5" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+          <grid row="16" column="1" row-span="1" col-span="5" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
         </constraints>
       </vspacer>
       <vspacer id="4ec83">
@@ -188,7 +188,7 @@
       <hspacer id="18820">
         <constraints>
           <grid row="12" column="2" row-span="1" col-span="3" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false">
-            <preferred-size width="-1" height="15"/>
+            <preferred-size width="-1" height="5"/>
           </grid>
         </constraints>
       </hspacer>
@@ -233,6 +233,24 @@
           <font name="Roboto" size="16" style="0"/>
         </properties>
       </component>
+      <component id="acfbb" class="javax.swing.JButton" binding="kembaliButton" default-binding="true">
+        <constraints>
+          <grid row="15" column="2" row-span="1" col-span="3" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <background color="-1"/>
+          <font name="Roboto" size="16" style="1"/>
+          <foreground color="-14727814"/>
+          <text value="BACK"/>
+        </properties>
+      </component>
+      <hspacer id="86061">
+        <constraints>
+          <grid row="14" column="2" row-span="1" col-span="3" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="-1" height="75"/>
+          </grid>
+        </constraints>
+      </hspacer>
     </children>
   </grid>
 </form>

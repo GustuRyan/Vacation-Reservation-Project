@@ -8,7 +8,7 @@ public class importSQL {
     private static Connection connection;
 
     public static void importData() {
-        String jdbcURL = "jdbc:mysql://localhost:3306/frontoffice?useSSL=false&serverTimezone=UTC";
+        String jdbcURL = "jdbc:mysql://localhost:3306/fppbo?useSSL=false&serverTimezone=UTC";
         String username = "root";
         String password = "";
 

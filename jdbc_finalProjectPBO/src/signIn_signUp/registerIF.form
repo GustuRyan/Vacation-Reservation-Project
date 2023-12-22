@@ -28,7 +28,7 @@
               <background color="-14727814"/>
               <font name="Roboto" size="16" style="1"/>
               <foreground color="-262152"/>
-              <text value="Confirm"/>
+              <text value="CONFIRM"/>
             </properties>
           </component>
           <hspacer id="dce28">
@@ -262,7 +262,7 @@
               <background color="-262152"/>
               <font name="Roboto" size="16" style="1"/>
               <foreground color="-14727814"/>
-              <text value="Back"/>
+              <text value="BACK"/>
             </properties>
           </component>
         </children>
