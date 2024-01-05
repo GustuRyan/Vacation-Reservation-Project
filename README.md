@@ -109,18 +109,18 @@ STEP 2: Pada bagian pilih interfaceHome dan Run.
 
 ## Screenshot Aplikasi
 1. Login Page
-![Login.png](bin%2FLogin.png)
+![Login.png](https://github.com/GustuRyan/Final-Project-PBO/blob/main/jdbc_finalProjectPBO/bin/Login.png)
 2. Registration Page
-![Registrasi.png](bin%2FRegistrasi.png)
+![Registrasi.png](https://github.com/GustuRyan/Final-Project-PBO/blob/main/jdbc_finalProjectPBO/bin/Registrasi.png)
 3. Forgot Password
-![Forgot.png](bin%2FForgot.png)
+![Forgot.png](https://github.com/GustuRyan/Final-Project-PBO/blob/main/jdbc_finalProjectPBO/bin/Forgot.png)
 4. Home Page Before Login
-![Home Page Before.png](bin%2FHome%20Page%20Before.png)
+![Home Page Before.png](https://github.com/GustuRyan/Final-Project-PBO/blob/main/jdbc_finalProjectPBO/bin/Home%20Page%20After.png)
 5. Home Page After Login
-![Home Page After.png](bin%2FHome%20Page%20After.png)
+![Home Page After.png](https://github.com/GustuRyan/Final-Project-PBO/blob/main/jdbc_finalProjectPBO/bin/Home%20Page%20Before.png)
 6. Reservasi Hotel
-![Registrasi.png](bin%2FRegistrasi.png)
+![Registrasi.png](https://github.com/GustuRyan/Final-Project-PBO/blob/main/jdbc_finalProjectPBO/bin/Reservasi%20Hotel.png)
 7. Explore Page
-![Explore.png](bin%2FExplore.png)
+![Explore.png](https://github.com/GustuRyan/Final-Project-PBO/blob/main/jdbc_finalProjectPBO/bin/Explore.png)
 ## Contributing
 "Saran dan Peningkatan Program sangat Dipersilahkan"
