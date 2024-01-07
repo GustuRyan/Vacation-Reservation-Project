@@ -4,6 +4,7 @@ import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+// Kelas untuk antarmuka lupa password
 public class forgotPassIF extends JFrame {
 
     JPanel forgotPassPanel;
@@ -21,8 +22,10 @@ public class forgotPassIF extends JFrame {
     private JRadioButton showPass1;
     private JButton backButton;
 
+    // Variabel untuk melacak apakah ini pertama kali membuka jendela
     public boolean firstTime = true;
 
+    // Konstruktor untuk menginisialisasi antarmuka lupa password
     public forgotPassIF() {
         // Memeriksa apakah passwordField saat ini terkunci
         boolean isEditable = passwordField1.isEditable();
@@ -30,17 +33,21 @@ public class forgotPassIF extends JFrame {
         // Mengganti status kebalikan (mengunci jika terbuka, membuka jika terkunci)
         passwordField1.setEditable(!isEditable);
         passwordField2.setEditable(!isEditable2);
+
+        // Menambahkan ActionListener untuk tombol "Lanjut"
         nextPanelButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                // Melakukan impor data dan melakukan pemeriksaan data
                 importSQL.importData();
                 importSQL.Checking check = new importSQL().new Checking();
                 check.desired(inputUsername.getText());
                 Login.ForgotPass forgot = new Login().new ForgotPass();
                 forgot.reAunthentication(inputUsername.getText(), check.getUsername(), inputEmail.getText(), check.getEmail(), inputPhone.getText(), check.getPhone());
 
-                if (forgot.getConfirm()){
-                    if(firstTime) {
+                // Memeriksa konfirmasi data dan memberikan feedback
+                if (forgot.getConfirm()) {
+                    if (firstTime) {
                         boolean isEditable = passwordField1.isEditable();
                         passwordField1.setEditable(!isEditable);
 
@@ -49,15 +56,17 @@ public class forgotPassIF extends JFrame {
                         firstTime = false;
                     }
                     JOptionPane.showMessageDialog(nextPanelButton, "Data Diri Terkonfirmasi! \n(tutup jendela ini untuk memasukan password baru.)");
-                }
-                else {
+                } else {
                     JOptionPane.showMessageDialog(nextPanelButton, "Data Diri Tidak Valid!");
                 }
             }
         });
+
+        // Menambahkan ActionListener untuk tombol "Konfirmasi Password Baru"
         confirmNewPasswordButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                // Melakukan pemeriksaan dan pembaruan password
                 importSQL.Checking check = new importSQL().new Checking();
                 check.desired(inputUsername.getText());
 
@@ -66,8 +75,9 @@ public class forgotPassIF extends JFrame {
                 char[] password2Chars = passwordField2.getPassword();
                 String password2 = new String(passwordChars);
 
-                if (password.equals(password2)){
-                    importSQL.Update update = new importSQL(). new Update();
+                // Memeriksa kecocokan password dan memberikan feedback
+                if (password.equals(password2)) {
+                    importSQL.Update update = new importSQL().new Update();
                     update.updatePass(check.getUsername(), password);
                     JOptionPane.showMessageDialog(confirmNewPasswordButton, "Password Baru Terkonfirmasi!");
                 } else {
@@ -75,19 +85,22 @@ public class forgotPassIF extends JFrame {
                 }
             }
         });
+
+        // Menambahkan ActionListener untuk tombol "Tampilkan Password"
         showPass1.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                if (showPass1.isSelected()){
-                    passwordField1.setEchoChar((char)0);
-                    passwordField2.setEchoChar((char)0);
-                }
-                else{
+                if (showPass1.isSelected()) {
+                    passwordField1.setEchoChar((char) 0);
+                    passwordField2.setEchoChar((char) 0);
+                } else {
                     passwordField1.setEchoChar('\uF09F');
                     passwordField2.setEchoChar('\uF09F');
                 }
             }
         });
+
+        // Menambahkan ActionListener untuk tombol "Kembali"
         backButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -97,7 +110,9 @@ public class forgotPassIF extends JFrame {
             }
         });
     }
-    public void interfaceForgotPass(){
+
+    // Metode untuk menampilkan antarmuka lupa password
+    public void interfaceForgotPass() {
         forgotPassIF frame = new forgotPassIF();
         frame.setContentPane(frame.forgotPassPanel);
         frame.setBounds(120, 40, 0, 0);
