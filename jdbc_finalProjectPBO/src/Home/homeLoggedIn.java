@@ -18,8 +18,7 @@ public class homeLoggedIn extends JFrame {
     private JButton selengkapnyaButton;
     private JButton selengkapnyaButton1;
 
-    public homeLoggedIn(String user){
-        String username = user;
+    public homeLoggedIn(String username){
         usernameButton.setText(username);
         RESERVATIONButton.addActionListener(new ActionListener() {
             @Override

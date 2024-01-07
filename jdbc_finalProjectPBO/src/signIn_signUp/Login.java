@@ -46,7 +46,7 @@ public class Login {
 
         // Metode utama (tidak diimplementasikan di sini)
         public static void main(String[] args) {
-
+            
         }
     }
 }

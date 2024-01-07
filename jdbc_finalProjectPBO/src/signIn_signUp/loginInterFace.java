@@ -1,5 +1,6 @@
 package signIn_signUp;
 
+import Home.homeAdmin;
 import Home.homeLoggedIn;
 import Home.interfaceHome;
 
@@ -7,6 +8,7 @@ import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+// Kelas yang mengatur antarmuka login
 public class loginInterFace extends JFrame {
     private JPanel loginPanel;
     private JTextField txtUsername;
@@ -16,13 +18,15 @@ public class loginInterFace extends JFrame {
     private JButton registerButton;
     private JButton forgotPass;
     private JButton kembaliButton;
+    private JButton loginAdmin;
 
+    // Konstruktor untuk menginisialisasi antarmuka login
     public loginInterFace() {
-
-        // Inisialisasi komponen GUI di sini
+        // Menambahkan ActionListener untuk tombol "Log In"
         buttonClick.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                // Melakukan impor data dan pemeriksaan otentikasi
                 importSQL.importData();
                 importSQL.Checking check = new importSQL().new Checking();
                 check.desired(txtUsername.getText());
@@ -31,6 +35,8 @@ public class loginInterFace extends JFrame {
                 char[] passwordChars = passwordField.getPassword();
                 // Mengubah karakter menjadi String
                 String password = new String(passwordChars);
+
+                // Memeriksa otentikasi dan memberikan feedback
                 if (authentication.authenticate(check.getUsername(), txtUsername.getText(), check.getPassword(), password)) {
                     JOptionPane.showMessageDialog(buttonClick, "Log In SUKSES!");
                     homeLoggedIn frame = new homeLoggedIn(txtUsername.getText());
@@ -41,6 +47,8 @@ public class loginInterFace extends JFrame {
                 }
             }
         });
+
+        // Menambahkan ActionListener untuk tombol "Lupa Password"
         forgotPass.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -49,17 +57,20 @@ public class loginInterFace extends JFrame {
                 setVisible(false);
             }
         });
+
+        // Menambahkan ActionListener untuk tombol "Tampilkan Password"
         showPass.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                    if (showPass.isSelected()){
-                        passwordField.setEchoChar((char)0);
-                    }
-                    else{
-                        passwordField.setEchoChar('\uF09F');
-                    }
+                if (showPass.isSelected()) {
+                    passwordField.setEchoChar((char) 0);
+                } else {
+                    passwordField.setEchoChar('\uF09F');
+                }
             }
         });
+
+        // Menambahkan ActionListener untuk tombol "Daftar"
         registerButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -68,6 +79,8 @@ public class loginInterFace extends JFrame {
                 setVisible(false);
             }
         });
+
+        // Menambahkan ActionListener untuk tombol "Kembali"
         kembaliButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -76,9 +89,33 @@ public class loginInterFace extends JFrame {
                 setVisible(false);
             }
         });
+        loginAdmin.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                importSQL.importData();
+                importSQL.Checking check = new importSQL().new Checking();
+                check.desiredAdmin(txtUsername.getText());
+                Login.Authentication authentication = new Login().new Authentication();
+
+                char[] passwordChars = passwordField.getPassword();
+                // Mengubah karakter menjadi String
+                String password = new String(passwordChars);
+                if (authentication.authenticate(check.getUsername(), txtUsername.getText(), check.getPassword(), password)) {
+                    JOptionPane.showMessageDialog(buttonClick, "Log In SUKSES!");
+                    String admin = ("Admin " + txtUsername.getText());
+                    System.out.println(admin);
+                    homeAdmin frame = new homeAdmin(admin);
+                    frame.homeLIF(txtUsername.getText());
+                    setVisible(false);
+                } else {
+                    JOptionPane.showMessageDialog(buttonClick, "Log In TIDAK BERHASIL!");
+                }
+            }
+        });
     }
 
-    public static void interfaceLogin(){
+    // Metode statis untuk menampilkan antarmuka login
+    public static void interfaceLogin() {
         loginInterFace frame = new loginInterFace();
         frame.setContentPane(frame.loginPanel);
         frame.setBounds(120, 40, 0, 0);
@@ -87,8 +124,8 @@ public class loginInterFace extends JFrame {
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     }
 
+    // Metode main untuk menjalankan antarmuka login
     public static void main(String[] args) {
         interfaceLogin();
     }
 }
-
