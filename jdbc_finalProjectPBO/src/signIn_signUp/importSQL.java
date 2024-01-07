@@ -2,13 +2,14 @@ package signIn_signUp;
 
 import java.sql.*;
 
+// Kelas untuk mengelola koneksi ke database SQL
 public class importSQL {
 
     // Membuat variabel koneksi global
     private static Connection connection;
 
     public static void importData() {
-        String jdbcURL = "jdbc:mysql://localhost:3306/fppbo?useSSL=false&serverTimezone=UTC";
+        String jdbcURL = "jdbc:mysql://localhost:3306/frontoffice?useSSL=false&serverTimezone=UTC";
         String username = "root";
         String password = "";
 
@@ -29,6 +30,7 @@ public class importSQL {
         }
     }
 
+    // Kelas untuk memeriksa keberadaan data dalam database
     class Checking {
         private String subject;
         private String username;
@@ -36,6 +38,7 @@ public class importSQL {
         private  String email;
         private  String phone;
 
+        // Metode untuk memeriksa keberadaan username dalam database
         public void desired(String subject) {
             this.subject = subject;
 
@@ -63,6 +66,7 @@ public class importSQL {
             }
         }
 
+        // Getter untuk mendapatkan informasi username, password, email, dan telepon
         public String getUsername(){
             return username;
         }
@@ -80,6 +84,7 @@ public class importSQL {
         }
     }
 
+    // Kelas untuk meng-update password dalam database
     class Update {
         public void updatePass(String nama, String password){
             String sql = "UPDATE customer SET PasswordUser = ? WHERE NamaUser = ?";
@@ -100,6 +105,7 @@ public class importSQL {
         }
     }
 
+    // Kelas untuk menambahkan data pelanggan ke dalam database
     class Insert {
         public void regist(String nama, String password, String email, String telepon){
             String sql = "INSERT INTO customer (NamaUser, PasswordUser, EmailUser, Telepon) VALUES (?, ?, ?, ?)";
@@ -123,6 +129,7 @@ public class importSQL {
         }
     }
 
+    // Metode utama untuk menjalankan uji coba
     public static void main(String[] args) {
         Checking pointer = new importSQL().new Checking();
         importData();

@@ -7,19 +7,21 @@ import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+// // Kelas untuk menangani antarmuka utama (home) aplikasi
 public class interfaceHome  extends  JFrame  {
     private JPanel homePanel;
-    private JButton HOMEButton;
-    private JButton EXPLOREButton;
-    private JButton RESERVATIONButton;
-    private JButton LOGINButton;
-    private JButton REGISTERButton;
+    private JButton HOMEButton;         // Tombol untuk menuju halaman utama
+    private JButton EXPLOREButton;      // Tombol untuk menjelajahi aplikasi
+    private JButton RESERVATIONButton;  // Tombol untuk membuat reservasi
+    private JButton LOGINButton;        // Tombol untuk membuka halaman login
+    private JButton REGISTERButton;     // Tombol untuk membuka halaman registrasi
     private JPanel leftCardPanel;
-    private JButton selengkapnyaButton;
-    private JButton selengkapnyaButton1;
+    private JButton selengkapnyaButton; // Tombol "Selengkapnya" 1
+    private JButton selengkapnyaButton1; // Tombol "Selengkapnya" 2
 
+    // Konstruktor untuk menginisialisasi antarmuka home
     public interfaceHome(){
-
+        //Menambahkan action listener pada tombol login
         LOGINButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -28,6 +30,7 @@ public class interfaceHome  extends  JFrame  {
                 setVisible(false);
             }
         });
+        //Menambahkan action listener pada tombol reservation
         RESERVATIONButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -37,6 +40,7 @@ public class interfaceHome  extends  JFrame  {
                 setVisible(false);
             }
         });
+        //Menambahkan action listener pada tombol explore
         EXPLOREButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -46,6 +50,7 @@ public class interfaceHome  extends  JFrame  {
                 setVisible(false);
             }
         });
+        //Menambahkan action listener pada tombol register
         REGISTERButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
