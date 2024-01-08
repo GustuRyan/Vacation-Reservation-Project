@@ -184,6 +184,7 @@ public class importSQL {
     }
 
     public class Update {
+        public boolean updated;
         public void updatePass(String nama, String password){
             String sql = "UPDATE customer SET PasswordUser = ? WHERE NamaUser = ?";
             try (PreparedStatement preparedStatement = connection.prepareStatement(sql)) {
@@ -202,7 +203,7 @@ public class importSQL {
             }
         }
 
-        public void updateProduct(String key, String nokamar, String img, String namahotel, String tipekamar, String deskripsi, int kapasitas, double harga){
+        public boolean updateProduct(String key, String nokamar, String img, String namahotel, String tipekamar, String deskripsi, int kapasitas, double harga){
             String sql = "UPDATE produk SET NoKamar = ?, img = ?, NamaHotel = ?, TipeKamar = ?, Deskripsi = ?, Kapasitas = ?, Harga = ?  WHERE NoKamar = ?";
             try (PreparedStatement preparedStatement = connection.prepareStatement(sql)) {
                 preparedStatement.setString(1, nokamar);
@@ -218,8 +219,10 @@ public class importSQL {
 
                 if (rowsUpdated > 0) {
                     System.out.println("Data berhasil diperbarui.");
+                    return updated = true;
                 } else {
                     System.out.println("Data tidak ditemukan untuk diperbarui.");
+                    return updated = false;
                 }
             } catch (SQLException e) {
                 throw new RuntimeException(e);

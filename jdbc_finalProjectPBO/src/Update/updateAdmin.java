@@ -93,7 +93,12 @@ public class updateAdmin extends JFrame {
                 }
 
                 importSQL.Update update = new importSQL().new Update();
-                update.updateProduct(check.getNoKamar(), nokamar, img, namahotel, tipekamar, deskripsi, kapasitas, harga);
+                if (update.updateProduct(check.getNoKamar(), nokamar, img, namahotel, tipekamar, deskripsi, kapasitas, harga)){
+                    JOptionPane.showMessageDialog(RESERVATIONButton, "Data berhasil diupdate");
+                }
+                else {
+                    JOptionPane.showMessageDialog(RESERVATIONButton, "Data gagal diupdate");
+                }
             }
         });
     }
